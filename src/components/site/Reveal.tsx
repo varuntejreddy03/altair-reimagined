@@ -6,10 +6,11 @@ type RevealProps = {
   className?: string;
   delay?: number;
   as?: ElementType;
+  variant?: "default" | "scale";
 };
 
 /** Opacity/translate reveal on viewport entry. Reduced-motion is handled in CSS. */
-export function Reveal({ children, className, delay = 0, as }: RevealProps) {
+export function Reveal({ children, className, delay = 0, as, variant = "default" }: RevealProps) {
   const Tag = (as ?? "div") as ElementType;
   const ref = useRef<HTMLElement | null>(null);
   const [shown, setShown] = useState(false);
@@ -30,7 +31,7 @@ export function Reveal({ children, className, delay = 0, as }: RevealProps) {
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+      { rootMargin: "0px 0px -5% 0px", threshold: 0.05 },
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -40,7 +41,11 @@ export function Reveal({ children, className, delay = 0, as }: RevealProps) {
     <Tag
       ref={ref}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
-      className={cn("reveal", shown && "reveal-in", className)}
+      className={cn(
+        variant === "scale" ? "reveal-scale" : "reveal",
+        shown && "reveal-in",
+        className,
+      )}
     >
       {children}
     </Tag>
