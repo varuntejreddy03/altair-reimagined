@@ -10,33 +10,302 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiRouteImport } from './routes/ai'
+import { Route as ConsultingRouteImport } from './routes/consulting'
+import { Route as CyberSecurityRouteImport } from './routes/cyber-security'
+import { Route as DataSceineceRouteImport } from './routes/data-sceinece'
+import { Route as FullStackDevelopmentRouteImport } from './routes/full-stack-development'
+import { Route as InnovationRouteImport } from './routes/innovation'
+import { Route as ItStaffingRouteImport } from './routes/it-staffing'
+import { Route as ItStaffingAndConsultingRouteImport } from './routes/it-staffing-and-consulting'
+import { Route as SoftwareDevelopmentRouteImport } from './routes/software-development'
+import { Route as TrainingRouteImport } from './routes/training'
+import { Route as TrainingAndInnovationRouteImport } from './routes/training-and-innovation'
+import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as ProjectPagesSplatRouteImport } from './routes/project-pages.$'
+import { Route as ServicesArtificialIntelligenceRouteImport } from './routes/services.artificial-intelligence'
+import { Route as ServicesCybersecurityRouteImport } from './routes/services.cybersecurity'
+import { Route as ServicesDataScienceEngineeringRouteImport } from './routes/services.data-science-engineering'
+import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/services.full-stack-development'
+import { Route as ServicesItStaffingRouteImport } from './routes/services.it-staffing'
+import { Route as ServicesSoftwareDevelopmentRouteImport } from './routes/services.software-development'
+import { Route as ServicesTechnologyConsultingRouteImport } from './routes/services.technology-consulting'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiRoute = AiRouteImport.update({
+  id: '/ai',
+  path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultingRoute = ConsultingRouteImport.update({
+  id: '/consulting',
+  path: '/consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CyberSecurityRoute = CyberSecurityRouteImport.update({
+  id: '/cyber-security',
+  path: '/cyber-security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataSceineceRoute = DataSceineceRouteImport.update({
+  id: '/data-sceinece',
+  path: '/data-sceinece',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FullStackDevelopmentRoute = FullStackDevelopmentRouteImport.update({
+  id: '/full-stack-development',
+  path: '/full-stack-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InnovationRoute = InnovationRouteImport.update({
+  id: '/innovation',
+  path: '/innovation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItStaffingRoute = ItStaffingRouteImport.update({
+  id: '/it-staffing',
+  path: '/it-staffing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItStaffingAndConsultingRoute = ItStaffingAndConsultingRouteImport.update({
+  id: '/it-staffing-and-consulting',
+  path: '/it-staffing-and-consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoftwareDevelopmentRoute = SoftwareDevelopmentRouteImport.update({
+  id: '/software-development',
+  path: '/software-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainingRoute = TrainingRouteImport.update({
+  id: '/training',
+  path: '/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainingAndInnovationRoute = TrainingAndInnovationRouteImport.update({
+  id: '/training-and-innovation',
+  path: '/training-and-innovation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoRoute = WhatWeDoRouteImport.update({
+  id: '/what-we-do',
+  path: '/what-we-do',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectPagesSplatRoute = ProjectPagesSplatRouteImport.update({
+  id: '/project-pages/$',
+  path: '/project-pages/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesArtificialIntelligenceRoute =
+  ServicesArtificialIntelligenceRouteImport.update({
+    id: '/services/artificial-intelligence',
+    path: '/services/artificial-intelligence',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesCybersecurityRoute = ServicesCybersecurityRouteImport.update({
+  id: '/services/cybersecurity',
+  path: '/services/cybersecurity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesDataScienceEngineeringRoute =
+  ServicesDataScienceEngineeringRouteImport.update({
+    id: '/services/data-science-engineering',
+    path: '/services/data-science-engineering',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesFullStackDevelopmentRoute =
+  ServicesFullStackDevelopmentRouteImport.update({
+    id: '/services/full-stack-development',
+    path: '/services/full-stack-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesItStaffingRoute = ServicesItStaffingRouteImport.update({
+  id: '/services/it-staffing',
+  path: '/services/it-staffing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSoftwareDevelopmentRoute =
+  ServicesSoftwareDevelopmentRouteImport.update({
+    id: '/services/software-development',
+    path: '/services/software-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesTechnologyConsultingRoute =
+  ServicesTechnologyConsultingRouteImport.update({
+    id: '/services/technology-consulting',
+    path: '/services/technology-consulting',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/consulting': typeof ConsultingRoute
+  '/cyber-security': typeof CyberSecurityRoute
+  '/data-sceinece': typeof DataSceineceRoute
+  '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/innovation': typeof InnovationRoute
+  '/it-staffing': typeof ItStaffingRoute
+  '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
+  '/software-development': typeof SoftwareDevelopmentRoute
+  '/training': typeof TrainingRoute
+  '/training-and-innovation': typeof TrainingAndInnovationRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/project-pages/$': typeof ProjectPagesSplatRoute
+  '/services/artificial-intelligence': typeof ServicesArtificialIntelligenceRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-science-engineering': typeof ServicesDataScienceEngineeringRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/it-staffing': typeof ServicesItStaffingRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/consulting': typeof ConsultingRoute
+  '/cyber-security': typeof CyberSecurityRoute
+  '/data-sceinece': typeof DataSceineceRoute
+  '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/innovation': typeof InnovationRoute
+  '/it-staffing': typeof ItStaffingRoute
+  '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
+  '/software-development': typeof SoftwareDevelopmentRoute
+  '/training': typeof TrainingRoute
+  '/training-and-innovation': typeof TrainingAndInnovationRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/project-pages/$': typeof ProjectPagesSplatRoute
+  '/services/artificial-intelligence': typeof ServicesArtificialIntelligenceRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-science-engineering': typeof ServicesDataScienceEngineeringRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/it-staffing': typeof ServicesItStaffingRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/consulting': typeof ConsultingRoute
+  '/cyber-security': typeof CyberSecurityRoute
+  '/data-sceinece': typeof DataSceineceRoute
+  '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/innovation': typeof InnovationRoute
+  '/it-staffing': typeof ItStaffingRoute
+  '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
+  '/software-development': typeof SoftwareDevelopmentRoute
+  '/training': typeof TrainingRoute
+  '/training-and-innovation': typeof TrainingAndInnovationRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/project-pages/$': typeof ProjectPagesSplatRoute
+  '/services/artificial-intelligence': typeof ServicesArtificialIntelligenceRoute
+  '/services/cybersecurity': typeof ServicesCybersecurityRoute
+  '/services/data-science-engineering': typeof ServicesDataScienceEngineeringRoute
+  '/services/full-stack-development': typeof ServicesFullStackDevelopmentRoute
+  '/services/it-staffing': typeof ServicesItStaffingRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai'
+    | '/consulting'
+    | '/cyber-security'
+    | '/data-sceinece'
+    | '/full-stack-development'
+    | '/innovation'
+    | '/it-staffing'
+    | '/it-staffing-and-consulting'
+    | '/software-development'
+    | '/training'
+    | '/training-and-innovation'
+    | '/what-we-do'
+    | '/project-pages/$'
+    | '/services/artificial-intelligence'
+    | '/services/cybersecurity'
+    | '/services/data-science-engineering'
+    | '/services/full-stack-development'
+    | '/services/it-staffing'
+    | '/services/software-development'
+    | '/services/technology-consulting'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai'
+    | '/consulting'
+    | '/cyber-security'
+    | '/data-sceinece'
+    | '/full-stack-development'
+    | '/innovation'
+    | '/it-staffing'
+    | '/it-staffing-and-consulting'
+    | '/software-development'
+    | '/training'
+    | '/training-and-innovation'
+    | '/what-we-do'
+    | '/project-pages/$'
+    | '/services/artificial-intelligence'
+    | '/services/cybersecurity'
+    | '/services/data-science-engineering'
+    | '/services/full-stack-development'
+    | '/services/it-staffing'
+    | '/services/software-development'
+    | '/services/technology-consulting'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai'
+    | '/consulting'
+    | '/cyber-security'
+    | '/data-sceinece'
+    | '/full-stack-development'
+    | '/innovation'
+    | '/it-staffing'
+    | '/it-staffing-and-consulting'
+    | '/software-development'
+    | '/training'
+    | '/training-and-innovation'
+    | '/what-we-do'
+    | '/project-pages/$'
+    | '/services/artificial-intelligence'
+    | '/services/cybersecurity'
+    | '/services/data-science-engineering'
+    | '/services/full-stack-development'
+    | '/services/it-staffing'
+    | '/services/software-development'
+    | '/services/technology-consulting'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiRoute: typeof AiRoute
+  ConsultingRoute: typeof ConsultingRoute
+  CyberSecurityRoute: typeof CyberSecurityRoute
+  DataSceineceRoute: typeof DataSceineceRoute
+  FullStackDevelopmentRoute: typeof FullStackDevelopmentRoute
+  InnovationRoute: typeof InnovationRoute
+  ItStaffingRoute: typeof ItStaffingRoute
+  ItStaffingAndConsultingRoute: typeof ItStaffingAndConsultingRoute
+  SoftwareDevelopmentRoute: typeof SoftwareDevelopmentRoute
+  TrainingRoute: typeof TrainingRoute
+  TrainingAndInnovationRoute: typeof TrainingAndInnovationRoute
+  WhatWeDoRoute: typeof WhatWeDoRoute
+  ProjectPagesSplatRoute: typeof ProjectPagesSplatRoute
+  ServicesArtificialIntelligenceRoute: typeof ServicesArtificialIntelligenceRoute
+  ServicesCybersecurityRoute: typeof ServicesCybersecurityRoute
+  ServicesDataScienceEngineeringRoute: typeof ServicesDataScienceEngineeringRoute
+  ServicesFullStackDevelopmentRoute: typeof ServicesFullStackDevelopmentRoute
+  ServicesItStaffingRoute: typeof ServicesItStaffingRoute
+  ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
+  ServicesTechnologyConsultingRoute: typeof ServicesTechnologyConsultingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +317,171 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai': {
+      id: '/ai'
+      path: '/ai'
+      fullPath: '/ai'
+      preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consulting': {
+      id: '/consulting'
+      path: '/consulting'
+      fullPath: '/consulting'
+      preLoaderRoute: typeof ConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cyber-security': {
+      id: '/cyber-security'
+      path: '/cyber-security'
+      fullPath: '/cyber-security'
+      preLoaderRoute: typeof CyberSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data-sceinece': {
+      id: '/data-sceinece'
+      path: '/data-sceinece'
+      fullPath: '/data-sceinece'
+      preLoaderRoute: typeof DataSceineceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/full-stack-development': {
+      id: '/full-stack-development'
+      path: '/full-stack-development'
+      fullPath: '/full-stack-development'
+      preLoaderRoute: typeof FullStackDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/innovation': {
+      id: '/innovation'
+      path: '/innovation'
+      fullPath: '/innovation'
+      preLoaderRoute: typeof InnovationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/it-staffing': {
+      id: '/it-staffing'
+      path: '/it-staffing'
+      fullPath: '/it-staffing'
+      preLoaderRoute: typeof ItStaffingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/it-staffing-and-consulting': {
+      id: '/it-staffing-and-consulting'
+      path: '/it-staffing-and-consulting'
+      fullPath: '/it-staffing-and-consulting'
+      preLoaderRoute: typeof ItStaffingAndConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/software-development': {
+      id: '/software-development'
+      path: '/software-development'
+      fullPath: '/software-development'
+      preLoaderRoute: typeof SoftwareDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/training': {
+      id: '/training'
+      path: '/training'
+      fullPath: '/training'
+      preLoaderRoute: typeof TrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/training-and-innovation': {
+      id: '/training-and-innovation'
+      path: '/training-and-innovation'
+      fullPath: '/training-and-innovation'
+      preLoaderRoute: typeof TrainingAndInnovationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do': {
+      id: '/what-we-do'
+      path: '/what-we-do'
+      fullPath: '/what-we-do'
+      preLoaderRoute: typeof WhatWeDoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/project-pages/$': {
+      id: '/project-pages/$'
+      path: '/project-pages/$'
+      fullPath: '/project-pages/$'
+      preLoaderRoute: typeof ProjectPagesSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/artificial-intelligence': {
+      id: '/services/artificial-intelligence'
+      path: '/services/artificial-intelligence'
+      fullPath: '/services/artificial-intelligence'
+      preLoaderRoute: typeof ServicesArtificialIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cybersecurity': {
+      id: '/services/cybersecurity'
+      path: '/services/cybersecurity'
+      fullPath: '/services/cybersecurity'
+      preLoaderRoute: typeof ServicesCybersecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/data-science-engineering': {
+      id: '/services/data-science-engineering'
+      path: '/services/data-science-engineering'
+      fullPath: '/services/data-science-engineering'
+      preLoaderRoute: typeof ServicesDataScienceEngineeringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/full-stack-development': {
+      id: '/services/full-stack-development'
+      path: '/services/full-stack-development'
+      fullPath: '/services/full-stack-development'
+      preLoaderRoute: typeof ServicesFullStackDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/it-staffing': {
+      id: '/services/it-staffing'
+      path: '/services/it-staffing'
+      fullPath: '/services/it-staffing'
+      preLoaderRoute: typeof ServicesItStaffingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/software-development': {
+      id: '/services/software-development'
+      path: '/services/software-development'
+      fullPath: '/services/software-development'
+      preLoaderRoute: typeof ServicesSoftwareDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/technology-consulting': {
+      id: '/services/technology-consulting'
+      path: '/services/technology-consulting'
+      fullPath: '/services/technology-consulting'
+      preLoaderRoute: typeof ServicesTechnologyConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiRoute: AiRoute,
+  ConsultingRoute: ConsultingRoute,
+  CyberSecurityRoute: CyberSecurityRoute,
+  DataSceineceRoute: DataSceineceRoute,
+  FullStackDevelopmentRoute: FullStackDevelopmentRoute,
+  InnovationRoute: InnovationRoute,
+  ItStaffingRoute: ItStaffingRoute,
+  ItStaffingAndConsultingRoute: ItStaffingAndConsultingRoute,
+  SoftwareDevelopmentRoute: SoftwareDevelopmentRoute,
+  TrainingRoute: TrainingRoute,
+  TrainingAndInnovationRoute: TrainingAndInnovationRoute,
+  WhatWeDoRoute: WhatWeDoRoute,
+  ProjectPagesSplatRoute: ProjectPagesSplatRoute,
+  ServicesArtificialIntelligenceRoute: ServicesArtificialIntelligenceRoute,
+  ServicesCybersecurityRoute: ServicesCybersecurityRoute,
+  ServicesDataScienceEngineeringRoute: ServicesDataScienceEngineeringRoute,
+  ServicesFullStackDevelopmentRoute: ServicesFullStackDevelopmentRoute,
+  ServicesItStaffingRoute: ServicesItStaffingRoute,
+  ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
+  ServicesTechnologyConsultingRoute: ServicesTechnologyConsultingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
