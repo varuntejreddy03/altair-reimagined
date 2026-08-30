@@ -24,7 +24,7 @@ const ctaStyles: Record<NonNullable<CtaProps["variant"]>, string> = {
   "ghost-invert": "border border-cyan-soft/40 text-ice hover:border-cyan-accent hover:bg-navy-800",
 };
 
-export function Cta({ to, search, children, variant = "primary", className }: CtaProps) {
+export function Cta({ to, search = {}, children, variant = "primary", className }: CtaProps) {
   return (
     <Link
       to={to}
@@ -133,7 +133,7 @@ export function FeatureCard({
   description,
   tags,
   to,
-  search,
+  search = {},
 }: {
   icon?: LucideIcon;
   title: string;
@@ -240,7 +240,7 @@ export function ContactBand({
             <p className="measure mt-4 text-cyan-soft/85">{description}</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Cta to="/contact" search={interest ? { interest } : undefined}>
+            <Cta to="/contact" search={interest ? { interest } : {}}>
               {ctaLabel}
             </Cta>
             <CallCta variant="ghost-invert" />
