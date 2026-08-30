@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as AiRouteImport } from './routes/ai'
+import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ConsultingRouteImport } from './routes/consulting'
 import { Route as CyberSecurityRouteImport } from './routes/cyber-security'
 import { Route as DataSceineceRouteImport } from './routes/data-sceinece'
@@ -25,6 +26,7 @@ import { Route as SoftwareDevelopmentRouteImport } from './routes/software-devel
 import { Route as TrainingRouteImport } from './routes/training'
 import { Route as TrainingAndInnovationRouteImport } from './routes/training-and-innovation'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as ProjectPagesSplatRouteImport } from './routes/project-pages.$'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesArtificialIntelligenceRouteImport } from './routes/services.artificial-intelligence'
@@ -50,6 +52,11 @@ const AboutUsRoute = AboutUsRouteImport.update({
 const AiRoute = AiRouteImport.update({
   id: '/ai',
   path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsultingRoute = ConsultingRouteImport.update({
@@ -117,6 +124,11 @@ const WhatWeDoRoute = WhatWeDoRouteImport.update({
   path: '/what-we-do',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectPagesSplatRoute = ProjectPagesSplatRouteImport.update({
   id: '/project-pages/$',
   path: '/project-pages/$',
@@ -182,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
+  '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
@@ -204,6 +217,7 @@ export interface FileRoutesByFullPath {
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
   '/skills-lab/training': typeof SkillsLabTrainingRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/skills-lab/': typeof SkillsLabIndexRoute
 }
@@ -211,6 +225,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
+  '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
@@ -233,6 +248,7 @@ export interface FileRoutesByTo {
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
   '/skills-lab/training': typeof SkillsLabTrainingRoute
+  '/case-studies': typeof CaseStudiesIndexRoute
   '/services': typeof ServicesIndexRoute
   '/skills-lab': typeof SkillsLabIndexRoute
 }
@@ -241,6 +257,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
+  '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
@@ -263,6 +280,7 @@ export interface FileRoutesById {
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
   '/skills-lab/training': typeof SkillsLabTrainingRoute
+  '/case-studies/': typeof CaseStudiesIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/skills-lab/': typeof SkillsLabIndexRoute
 }
@@ -272,6 +290,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/ai'
+    | '/careers'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
@@ -294,6 +313,7 @@ export interface FileRouteTypes {
     | '/services/software-development'
     | '/services/technology-consulting'
     | '/skills-lab/training'
+    | '/case-studies/'
     | '/services/'
     | '/skills-lab/'
   fileRoutesByTo: FileRoutesByTo
@@ -301,6 +321,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/ai'
+    | '/careers'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
@@ -323,6 +344,7 @@ export interface FileRouteTypes {
     | '/services/software-development'
     | '/services/technology-consulting'
     | '/skills-lab/training'
+    | '/case-studies'
     | '/services'
     | '/skills-lab'
   id:
@@ -330,6 +352,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about-us'
     | '/ai'
+    | '/careers'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
@@ -352,6 +375,7 @@ export interface FileRouteTypes {
     | '/services/software-development'
     | '/services/technology-consulting'
     | '/skills-lab/training'
+    | '/case-studies/'
     | '/services/'
     | '/skills-lab/'
   fileRoutesById: FileRoutesById
@@ -360,6 +384,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
   AiRoute: typeof AiRoute
+  CareersRoute: typeof CareersRoute
   ConsultingRoute: typeof ConsultingRoute
   CyberSecurityRoute: typeof CyberSecurityRoute
   DataSceineceRoute: typeof DataSceineceRoute
@@ -382,6 +407,7 @@ export interface RootRouteChildren {
   ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
   ServicesTechnologyConsultingRoute: typeof ServicesTechnologyConsultingRoute
   SkillsLabTrainingRoute: typeof SkillsLabTrainingRoute
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
   SkillsLabIndexRoute: typeof SkillsLabIndexRoute
 }
@@ -407,6 +433,13 @@ declare module '@tanstack/react-router' {
       path: '/ai'
       fullPath: '/ai'
       preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/consulting': {
@@ -500,6 +533,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhatWeDoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/project-pages/$': {
       id: '/project-pages/$'
       path: '/project-pages/$'
@@ -584,6 +624,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
   AiRoute: AiRoute,
+  CareersRoute: CareersRoute,
   ConsultingRoute: ConsultingRoute,
   CyberSecurityRoute: CyberSecurityRoute,
   DataSceineceRoute: DataSceineceRoute,
@@ -606,6 +647,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
   ServicesTechnologyConsultingRoute: ServicesTechnologyConsultingRoute,
   SkillsLabTrainingRoute: SkillsLabTrainingRoute,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
   SkillsLabIndexRoute: SkillsLabIndexRoute,
 }
