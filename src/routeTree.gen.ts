@@ -14,6 +14,7 @@ import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ConsultingRouteImport } from './routes/consulting'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CyberSecurityRouteImport } from './routes/cyber-security'
 import { Route as DataSceineceRouteImport } from './routes/data-sceinece'
 import { Route as FullStackDevelopmentRouteImport } from './routes/full-stack-development'
@@ -62,6 +63,11 @@ const CareersRoute = CareersRouteImport.update({
 const ConsultingRoute = ConsultingRouteImport.update({
   id: '/consulting',
   path: '/consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CyberSecurityRoute = CyberSecurityRouteImport.update({
@@ -196,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/ai': typeof AiRoute
   '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
+  '/contact': typeof ContactRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
@@ -227,6 +234,7 @@ export interface FileRoutesByTo {
   '/ai': typeof AiRoute
   '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
+  '/contact': typeof ContactRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
@@ -259,6 +267,7 @@ export interface FileRoutesById {
   '/ai': typeof AiRoute
   '/careers': typeof CareersRoute
   '/consulting': typeof ConsultingRoute
+  '/contact': typeof ContactRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
@@ -292,6 +301,7 @@ export interface FileRouteTypes {
     | '/ai'
     | '/careers'
     | '/consulting'
+    | '/contact'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
@@ -323,6 +333,7 @@ export interface FileRouteTypes {
     | '/ai'
     | '/careers'
     | '/consulting'
+    | '/contact'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
@@ -354,6 +365,7 @@ export interface FileRouteTypes {
     | '/ai'
     | '/careers'
     | '/consulting'
+    | '/contact'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
@@ -386,6 +398,7 @@ export interface RootRouteChildren {
   AiRoute: typeof AiRoute
   CareersRoute: typeof CareersRoute
   ConsultingRoute: typeof ConsultingRoute
+  ContactRoute: typeof ContactRoute
   CyberSecurityRoute: typeof CyberSecurityRoute
   DataSceineceRoute: typeof DataSceineceRoute
   FullStackDevelopmentRoute: typeof FullStackDevelopmentRoute
@@ -447,6 +460,13 @@ declare module '@tanstack/react-router' {
       path: '/consulting'
       fullPath: '/consulting'
       preLoaderRoute: typeof ConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cyber-security': {
@@ -626,6 +646,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiRoute: AiRoute,
   CareersRoute: CareersRoute,
   ConsultingRoute: ConsultingRoute,
+  ContactRoute: ContactRoute,
   CyberSecurityRoute: CyberSecurityRoute,
   DataSceineceRoute: DataSceineceRoute,
   FullStackDevelopmentRoute: FullStackDevelopmentRoute,
