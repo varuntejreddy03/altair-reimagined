@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImage from "@/assets/about-workshop.jpg";
-import { Breadcrumbs, ContactBand, FeatureCard, PageHero, SectionHeading } from "@/components/site/Primitives";
+import {
+  Breadcrumbs,
+  ContactBand,
+  FeatureCard,
+  PageHero,
+  SectionHeading,
+} from "@/components/site/Primitives";
 import { ProcessTimeline } from "@/components/site/ProcessTimeline";
 import { Reveal } from "@/components/site/Reveal";
 import { company } from "@/content/site";
@@ -24,18 +30,45 @@ export const Route = createFileRoute("/about-us")({
 });
 
 const differentiators = [
-  { title: "Technical depth with business context", description: "Engineering decisions grounded in the outcome the business needs." },
-  { title: "Transparent, agile partnerships", description: "Clear scope, visible progress, and outcome-oriented collaboration." },
-  { title: "Hands-on building", description: "We build and operate, not presentation-only consulting." },
-  { title: "Continuous learning", description: "Responsible innovation supported by our own Skills Lab." },
-  { title: "Integrity and inclusion", description: "Long-term value created with teams we respect." },
+  {
+    title: "Technical depth with business context",
+    description: "Engineering decisions grounded in the outcome the business needs.",
+  },
+  {
+    title: "Transparent, agile partnerships",
+    description: "Clear scope, visible progress, and outcome-oriented collaboration.",
+  },
+  {
+    title: "Hands-on building",
+    description: "We build and operate, not presentation-only consulting.",
+  },
+  {
+    title: "Continuous learning",
+    description: "Responsible innovation supported by our own Skills Lab.",
+  },
+  {
+    title: "Integrity and inclusion",
+    description: "Long-term value created with teams we respect.",
+  },
 ];
 
 const howWeWork = [
-  { title: "Collaboration", description: "Your team and ours work as one group with shared visibility." },
-  { title: "Rapid iteration", description: "Short cycles that produce something reviewable early." },
-  { title: "Measurable outcomes", description: "Success defined before we start, tracked while we deliver." },
-  { title: "Scalable implementation", description: "Solutions built to survive growth, audit, and change." },
+  {
+    title: "Collaboration",
+    description: "Your team and ours work as one group with shared visibility.",
+  },
+  {
+    title: "Rapid iteration",
+    description: "Short cycles that produce something reviewable early.",
+  },
+  {
+    title: "Measurable outcomes",
+    description: "Success defined before we start, tracked while we deliver.",
+  },
+  {
+    title: "Scalable implementation",
+    description: "Solutions built to survive growth, audit, and change.",
+  },
 ];
 
 function AboutPage() {
@@ -84,7 +117,10 @@ function AboutPage() {
 
       <section className="bg-surface">
         <div className="container-page section-y">
-          <SectionHeading eyebrow="What sets us apart" title="Depth, transparency, and follow-through." />
+          <SectionHeading
+            eyebrow="What sets us apart"
+            title="Depth, transparency, and follow-through."
+          />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {differentiators.map((item, index) => (
               <Reveal key={item.title} delay={index * 55}>
@@ -106,7 +142,10 @@ function AboutPage() {
 
       <section className="bg-surface">
         <div className="container-page section-y">
-          <SectionHeading eyebrow="How we work" title="Practical habits that keep delivery honest." />
+          <SectionHeading
+            eyebrow="How we work"
+            title="Practical habits that keep delivery honest."
+          />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {howWeWork.map((item, index) => (
               <Reveal key={item.title} delay={index * 55}>
@@ -117,7 +156,11 @@ function AboutPage() {
         </div>
       </section>
 
-      <ContactBand title="Meet with Altair." description="Bring us the problem you are working on and we will bring the right people." ctaLabel="Meet with Altair" />
+      <ContactBand
+        title="Meet with Altair."
+        description="Bring us the problem you are working on and we will bring the right people."
+        ctaLabel="Meet with Altair"
+      />
     </>
   );
 }

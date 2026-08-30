@@ -55,10 +55,22 @@ export const services: Service[] = [
       {
         title: "Core capabilities",
         items: [
-          { title: "Artificial Intelligence", description: "Prediction, automation, and decision support built into real workflows." },
-          { title: "Cybersecurity", description: "Security engineered into design, delivery, and operations." },
-          { title: "Data Science & Engineering", description: "Pipelines, platforms, and analytics that make data usable." },
-          { title: "Full-Stack Development", description: "Web and mobile products with resilient backend systems." },
+          {
+            title: "Artificial Intelligence",
+            description: "Prediction, automation, and decision support built into real workflows.",
+          },
+          {
+            title: "Cybersecurity",
+            description: "Security engineered into design, delivery, and operations.",
+          },
+          {
+            title: "Data Science & Engineering",
+            description: "Pipelines, platforms, and analytics that make data usable.",
+          },
+          {
+            title: "Full-Stack Development",
+            description: "Web and mobile products with resilient backend systems.",
+          },
         ],
         layout: "cards",
       },
@@ -78,10 +90,22 @@ export const services: Service[] = [
       {
         title: "Engagement models",
         items: [
-          { title: "End-to-end product team", description: "A complete team accountable for outcome, quality, and release." },
-          { title: "Dedicated engineering pod", description: "An embedded pod working inside your delivery process." },
-          { title: "Modernization project", description: "A scoped programme to replace or re-platform legacy systems." },
-          { title: "Specialist capability", description: "Focused expertise added where your team needs depth." },
+          {
+            title: "End-to-end product team",
+            description: "A complete team accountable for outcome, quality, and release.",
+          },
+          {
+            title: "Dedicated engineering pod",
+            description: "An embedded pod working inside your delivery process.",
+          },
+          {
+            title: "Modernization project",
+            description: "A scoped programme to replace or re-platform legacy systems.",
+          },
+          {
+            title: "Specialist capability",
+            description: "Focused expertise added where your team needs depth.",
+          },
         ],
         layout: "cards",
       },
@@ -109,12 +133,34 @@ export const services: Service[] = [
       {
         title: "Capabilities",
         items: [
-          { title: "Predictive Analytics", description: "Forecasting, risk modeling, decision support, and feedback loops." },
-          { title: "Computer Vision", description: "Image recognition, inspection, OCR, and edge-ready deployment." },
-          { title: "Natural Language Processing", description: "Search, document intelligence, assistants, and LLM applications with guardrails." },
-          { title: "Security & Governance", description: "Access control, data masking, auditability, compliance, and responsible AI controls." },
-          { title: "AI Agents", description: "Task-focused digital teammates that reason, retrieve, and act within approved boundaries." },
-          { title: "MLOps", description: "Model CI/CD, monitoring, drift detection, latency and cost controls, and safe rollback." },
+          {
+            title: "Predictive Analytics",
+            description: "Forecasting, risk modeling, decision support, and feedback loops.",
+          },
+          {
+            title: "Computer Vision",
+            description: "Image recognition, inspection, OCR, and edge-ready deployment.",
+          },
+          {
+            title: "Natural Language Processing",
+            description:
+              "Search, document intelligence, assistants, and LLM applications with guardrails.",
+          },
+          {
+            title: "Security & Governance",
+            description:
+              "Access control, data masking, auditability, compliance, and responsible AI controls.",
+          },
+          {
+            title: "AI Agents",
+            description:
+              "Task-focused digital teammates that reason, retrieve, and act within approved boundaries.",
+          },
+          {
+            title: "MLOps",
+            description:
+              "Model CI/CD, monitoring, drift detection, latency and cost controls, and safe rollback.",
+          },
         ],
         layout: "cards",
       },
@@ -175,12 +221,35 @@ export const services: Service[] = [
       {
         title: "Services",
         items: [
-          { title: "Cyber Strategy and Planning", description: "Current-state assessment, target-state roadmap, resources, timelines, and maturity planning." },
-          { title: "Security Assessments", description: "Cloud, network, firewall, architecture, controls, and Zero Trust maturity." },
-          { title: "Cybersecurity & Privacy Compliance", description: "Align controls with business objectives, regulatory needs, and industry frameworks." },
-          { title: "Secure Design & Implementation", description: "Integrate customized controls into systems and operations." },
-          { title: "Cyber Risk Management", description: "Identify, assess, prioritize, and mitigate threats based on business impact." },
-          { title: "Transformation Services", description: "Guide movement toward SASE, Zero Trust, and application-aware security architectures." },
+          {
+            title: "Cyber Strategy and Planning",
+            description:
+              "Current-state assessment, target-state roadmap, resources, timelines, and maturity planning.",
+          },
+          {
+            title: "Security Assessments",
+            description:
+              "Cloud, network, firewall, architecture, controls, and Zero Trust maturity.",
+          },
+          {
+            title: "Cybersecurity & Privacy Compliance",
+            description:
+              "Align controls with business objectives, regulatory needs, and industry frameworks.",
+          },
+          {
+            title: "Secure Design & Implementation",
+            description: "Integrate customized controls into systems and operations.",
+          },
+          {
+            title: "Cyber Risk Management",
+            description:
+              "Identify, assess, prioritize, and mitigate threats based on business impact.",
+          },
+          {
+            title: "Transformation Services",
+            description:
+              "Guide movement toward SASE, Zero Trust, and application-aware security architectures.",
+          },
         ],
         layout: "cards",
       },
@@ -378,8 +447,20 @@ export const services: Service[] = [
 export const getService = (slug: string) => services.find((s) => s.slug === slug)!;
 
 export const engagementOptions = [
-  { title: "Project Delivery", description: "A scoped outcome delivered end to end by an Altair team." },
-  { title: "Team Augmentation", description: "Specialists embedded into your existing delivery teams." },
-  { title: "Advisory & Roadmapping", description: "Senior guidance on architecture, data, AI, and security decisions." },
-  { title: "Training & Enablement", description: "Practical upskilling through Altair Skills Lab." },
+  {
+    title: "Project Delivery",
+    description: "A scoped outcome delivered end to end by an Altair team.",
+  },
+  {
+    title: "Team Augmentation",
+    description: "Specialists embedded into your existing delivery teams.",
+  },
+  {
+    title: "Advisory & Roadmapping",
+    description: "Senior guidance on architecture, data, AI, and security decisions.",
+  },
+  {
+    title: "Training & Enablement",
+    description: "Practical upskilling through Altair Skills Lab.",
+  },
 ];

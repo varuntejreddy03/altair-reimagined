@@ -224,7 +224,10 @@ function HomePage() {
                   <p className="mt-4 text-sm text-cyan-soft">{industry.summary}</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-accent">
                     See how we help
-                    <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="size-4 transition-transform group-hover:translate-x-1"
+                    />
                   </span>
                 </Link>
               </Reveal>

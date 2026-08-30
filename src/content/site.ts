@@ -61,19 +61,23 @@ export const primaryNav: (NavItem | NavGroup)[] = [
 export const deliverySteps = [
   {
     title: "Discover",
-    description: "Clarify goals, constraints, users, data, and risk before a line of code is written.",
+    description:
+      "Clarify goals, constraints, users, data, and risk before a line of code is written.",
   },
   {
     title: "Design",
-    description: "Shape architecture, experience, and security decisions into a plan teams can execute.",
+    description:
+      "Shape architecture, experience, and security decisions into a plan teams can execute.",
   },
   {
     title: "Build",
-    description: "Deliver in short, reviewable increments with engineering standards applied throughout.",
+    description:
+      "Deliver in short, reviewable increments with engineering standards applied throughout.",
   },
   {
     title: "Validate",
-    description: "Test functionality, performance, accessibility, and security against agreed outcomes.",
+    description:
+      "Test functionality, performance, accessibility, and security against agreed outcomes.",
   },
   {
     title: "Scale",
@@ -147,8 +151,7 @@ export const industries = [
     name: "Retail",
     challenge:
       "Inventory, channels, and customer data live in separate systems, so decisions arrive late.",
-    summary:
-      "Connect inventory, customer journeys, analytics, and omnichannel experiences.",
+    summary: "Connect inventory, customer journeys, analytics, and omnichannel experiences.",
     capabilities: [
       "Omnichannel commerce experiences",
       "Inventory and demand analytics",

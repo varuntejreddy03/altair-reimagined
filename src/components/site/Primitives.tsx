@@ -115,7 +115,9 @@ export function PageHero({
           <div>
             {eyebrow ? <p className="eyebrow-invert">{eyebrow}</p> : null}
             <h1 className="h-display mt-5 text-ice">{title}</h1>
-            {body ? <p className="measure mt-6 text-base text-cyan-soft/85 sm:text-lg">{body}</p> : null}
+            {body ? (
+              <p className="measure mt-6 text-base text-cyan-soft/85 sm:text-lg">{body}</p>
+            ) : null}
             {children ? <div className="mt-9 flex flex-wrap gap-3">{children}</div> : null}
           </div>
           {media ? <div>{media}</div> : null}
@@ -166,7 +168,10 @@ export function FeatureCard({
       {to ? (
         <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand">
           Explore
-          <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-1" />
+          <ArrowRight
+            aria-hidden="true"
+            className="size-4 transition-transform group-hover:translate-x-1"
+          />
         </span>
       ) : null}
     </>

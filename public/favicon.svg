@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="facet-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="facet-left-outer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="facet-left-deep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="facet-right-outer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="facet-right-mid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="circuit-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0284c7" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <!-- Top Apex Facet -->
+    <polygon points="60,8 70,28 60,38 50,28" fill="url(#facet-top)" />
+
+    <!-- Left Outer Upper Facet -->
+    <polygon points="60,8 50,28 32,54 44,52" fill="#0ea5e9" />
+
+    <!-- Left Upper-Mid Facet -->
+    <polygon points="50,28 60,38 44,52" fill="#0284c7" />
+
+    <!-- Left Deep Inner Facet (Dark polygon) -->
+    <polygon points="60,38 44,52 48,72 58,58" fill="url(#facet-left-deep)" />
+
+    <!-- Left Mid Facet -->
+    <polygon points="44,52 32,54 20,86 38,78 48,72" fill="#0369a1" />
+
+    <!-- Left Lower Base Facet -->
+    <polygon points="20,86 12,104 36,104 38,78" fill="#0284c7" />
+    <polygon points="12,104 22,96 36,104" fill="#0369a1" />
+
+    <!-- Right Upper Outer Facet -->
+    <polygon points="60,8 70,28 88,64 74,56" fill="url(#facet-right-outer)" />
+
+    <!-- Right Upper Mid Facet -->
+    <polygon points="70,28 60,38 74,56" fill="#0284c7" />
+
+    <!-- Right Center Facet -->
+    <polygon points="60,38 74,56 86,76 66,72" fill="url(#facet-right-mid)" />
+
+    <!-- Right Lower Outer Facet -->
+    <polygon points="74,56 88,64 108,104 88,96 86,76" fill="#0ea5e9" />
+
+    <!-- Right Base Facet -->
+    <polygon points="88,96 108,104 84,104" fill="#0284c7" />
+
+    <!-- Circuit Trace Bar & Connection Nodes inside the 'A' crossbar -->
+    <!-- Connection Trace Line -->
+    <rect x="36" y="80" width="46" height="5" rx="2.5" fill="url(#circuit-grad)" />
+
+    <!-- Left Circuit Node Outer Ring & Inner Dot -->
+    <circle cx="36" cy="82.5" r="9" fill="none" stroke="#38bdf8" stroke-width="4.5" />
+    <circle cx="36" cy="82.5" r="3.5" fill="#ffffff" />
+
+    <!-- Right Circuit Node Small Circle -->
+    <circle cx="82" cy="82.5" r="6" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+
+    <!-- Data Pixels / Tech Blocks (above left circle) -->
+    <rect x="44" y="62" width="5.5" height="5.5" rx="1" fill="#ffffff" />
+    <rect x="52" y="68" width="5" height="5" rx="1" fill="#38bdf8" />
+    <rect x="42" y="70" width="4.5" height="4.5" rx="1" fill="#e0f2fe" />
+  </g>
+</svg>

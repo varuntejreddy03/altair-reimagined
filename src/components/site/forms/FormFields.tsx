@@ -54,7 +54,9 @@ export function ErrorSummary({ errors }: { errors: { id: string; message: string
       tabIndex={-1}
       className="rounded-xl border border-error/40 bg-error/5 p-4 text-sm text-error"
     >
-      <p className="font-semibold">Please review {errors.length} field{errors.length > 1 ? "s" : ""}:</p>
+      <p className="font-semibold">
+        Please review {errors.length} field{errors.length > 1 ? "s" : ""}:
+      </p>
       <ul className="mt-2 list-disc space-y-1 pl-5">
         {errors.map((error) => (
           <li key={error.id}>

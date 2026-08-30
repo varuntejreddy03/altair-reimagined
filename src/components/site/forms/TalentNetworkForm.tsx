@@ -53,7 +53,11 @@ export function TalentNetworkForm() {
         email: values.email,
         ...(values.phone ? { phone: values.phone } : {}),
         interest: values.area,
-        message: [values.summary, values.profileUrl ? `Profile: ${values.profileUrl}` : null, `Location: ${values.location}`]
+        message: [
+          values.summary,
+          values.profileUrl ? `Profile: ${values.profileUrl}` : null,
+          `Location: ${values.location}`,
+        ]
           .filter(Boolean)
           .join("\n"),
         sourcePath: "/careers",
@@ -78,13 +82,30 @@ export function TalentNetworkForm() {
           <input id="name" autoComplete="name" className={controlClass} {...register("name")} />
         </Field>
         <Field label="Email" htmlFor="email" required error={errors.email?.message}>
-          <input id="email" type="email" autoComplete="email" className={controlClass} {...register("email")} />
+          <input
+            id="email"
+            type="email"
+            autoComplete="email"
+            className={controlClass}
+            {...register("email")}
+          />
         </Field>
         <Field label="Phone" htmlFor="phone" error={errors.phone?.message}>
-          <input id="phone" type="tel" autoComplete="tel" className={controlClass} {...register("phone")} />
+          <input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            className={controlClass}
+            {...register("phone")}
+          />
         </Field>
         <Field label="Location" htmlFor="location" required error={errors.location?.message}>
-          <input id="location" autoComplete="address-level2" className={controlClass} {...register("location")} />
+          <input
+            id="location"
+            autoComplete="address-level2"
+            className={controlClass}
+            {...register("location")}
+          />
         </Field>
       </div>
 
@@ -113,7 +134,12 @@ export function TalentNetworkForm() {
       </Field>
 
       <div className="flex items-start gap-3">
-        <input id="talent-consent" type="checkbox" className="mt-1 size-5 rounded border-line" {...register("consent")} />
+        <input
+          id="talent-consent"
+          type="checkbox"
+          className="mt-1 size-5 rounded border-line"
+          {...register("consent")}
+        />
         <label htmlFor="talent-consent" className="text-sm text-ink">
           I consent to Altair Technologies Inc. keeping these details on file for future roles.
           <span className="text-error"> *</span>

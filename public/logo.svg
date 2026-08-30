@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logo-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="logo-left-outer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="logo-left-deep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="logo-right-outer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="logo-right-mid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="logo-circuit" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="logo-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <g transform="translate(100, 10)">
+    <!-- Top Apex Facet -->
+    <polygon points="100,10 120,48 100,66 80,48" fill="url(#logo-top)" />
+
+    <!-- Left Outer Upper Facet -->
+    <polygon points="100,10 80,48 48,94 70,90" fill="#0ea5e9" />
+
+    <!-- Left Upper-Mid Facet -->
+    <polygon points="80,48 100,66 70,90" fill="#0284c7" />
+
+    <!-- Left Deep Inner Facet (Dark polygon) -->
+    <polygon points="100,66 70,90 78,124 96,102" fill="url(#logo-left-deep)" />
+
+    <!-- Left Mid Facet -->
+    <polygon points="70,90 48,94 28,148 60,136 78,124" fill="#0369a1" />
+
+    <!-- Left Lower Base Facet -->
+    <polygon points="28,148 14,180 56,180 60,136" fill="#0284c7" />
+    <polygon points="14,180 32,166 56,180" fill="#0369a1" />
+
+    <!-- Right Upper Outer Facet -->
+    <polygon points="100,10 120,48 152,110 126,98" fill="url(#logo-right-outer)" />
+
+    <!-- Right Upper Mid Facet -->
+    <polygon points="120,48 100,66 126,98" fill="#0284c7" />
+
+    <!-- Right Center Facet -->
+    <polygon points="100,66 126,98 148,132 112,126" fill="url(#logo-right-mid)" />
+
+    <!-- Right Lower Outer Facet -->
+    <polygon points="126,98 152,110 186,180 152,166 148,132" fill="#0ea5e9" />
+
+    <!-- Right Base Facet -->
+    <polygon points="152,166 186,180 144,180" fill="#0284c7" />
+
+    <!-- Circuit Trace Bar & Connection Nodes -->
+    <rect x="56" y="138" width="80" height="9" rx="4.5" fill="url(#logo-circuit)" />
+
+    <!-- Left Circuit Node Outer Ring & Inner Dot -->
+    <circle cx="56" cy="142.5" r="16" fill="none" stroke="#38bdf8" stroke-width="7.5" />
+    <circle cx="56" cy="142.5" r="6" fill="#ffffff" />
+
+    <!-- Right Circuit Node Small Circle -->
+    <circle cx="136" cy="142.5" r="10.5" fill="#38bdf8" stroke="#ffffff" stroke-width="3" />
+
+    <!-- Data Pixels / Tech Blocks -->
+    <rect x="70" y="106" width="9.5" height="9.5" rx="1.5" fill="#ffffff" />
+    <rect x="84" y="116" width="8.5" height="8.5" rx="1.5" fill="#38bdf8" />
+    <rect x="66" y="120" width="8" height="8" rx="1.5" fill="#bae6fd" />
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="248" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="4" text-anchor="middle" fill="#1e293b">
+    ALTAIR
+  </text>
+  <text x="200" y="282" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="6" text-anchor="middle" fill="#334155">
+    TECHNOLOGIES INC
+  </text>
+</svg>

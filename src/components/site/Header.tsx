@@ -68,7 +68,9 @@ export function Header() {
     };
   }, [mobileOpen]);
 
-  const linkTone = transparent ? "text-ice hover:text-cyan-soft" : "text-foreground hover:text-brand";
+  const linkTone = transparent
+    ? "text-ice hover:text-cyan-soft"
+    : "text-foreground hover:text-brand";
 
   return (
     <header
@@ -134,7 +136,10 @@ export function Header() {
                         key={sub.to + sub.label}
                         to={sub.to}
                         className="block rounded-xl px-3 py-2 text-sm text-ink hover:bg-ice hover:text-foreground"
-                        activeProps={{ className: "block rounded-xl px-3 py-2 text-sm font-semibold text-foreground bg-ice" }}
+                        activeProps={{
+                          className:
+                            "block rounded-xl px-3 py-2 text-sm font-semibold text-foreground bg-ice",
+                        }}
                       >
                         {sub.label}
                       </Link>
@@ -176,7 +181,11 @@ export function Header() {
             isHome || mobileOpen ? "border-cyan-soft/40 text-ice" : "border-line text-foreground",
           )}
         >
-          {mobileOpen ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+          {mobileOpen ? (
+            <X aria-hidden="true" className="size-5" />
+          ) : (
+            <Menu aria-hidden="true" className="size-5" />
+          )}
           <span className="sr-only">{mobileOpen ? "Close menu" : "Open menu"}</span>
         </button>
       </div>
@@ -196,7 +205,10 @@ export function Header() {
                     <details className="group">
                       <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between py-2 text-base font-semibold text-ice">
                         {item.label}
-                        <ChevronDown aria-hidden="true" className="size-5 transition-transform group-open:rotate-180" />
+                        <ChevronDown
+                          aria-hidden="true"
+                          className="size-5 transition-transform group-open:rotate-180"
+                        />
                       </summary>
                       <ul className="pb-3 pl-1">
                         {item.to ? (
@@ -222,7 +234,10 @@ export function Header() {
                       to={item.to}
                       activeOptions={{ exact: item.to === "/" }}
                       className="flex min-h-11 items-center py-3 text-base font-semibold text-ice"
-                      activeProps={{ className: "flex min-h-11 items-center py-3 text-base font-semibold text-cyan-accent" }}
+                      activeProps={{
+                        className:
+                          "flex min-h-11 items-center py-3 text-base font-semibold text-cyan-accent",
+                      }}
                     >
                       {item.label}
                     </Link>

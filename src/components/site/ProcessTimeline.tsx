@@ -25,7 +25,13 @@ export function ProcessTimeline({
               </span>
               <span aria-hidden="true" className="h-px flex-1 bg-cyan-accent/50" />
             </span>
-            <h3 className={invert ? "mt-4 text-base font-semibold text-ice" : "mt-4 text-base font-semibold text-foreground"}>
+            <h3
+              className={
+                invert
+                  ? "mt-4 text-base font-semibold text-ice"
+                  : "mt-4 text-base font-semibold text-foreground"
+              }
+            >
               {step.title}
             </h3>
             {step.description ? (

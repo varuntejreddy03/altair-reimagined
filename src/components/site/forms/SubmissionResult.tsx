@@ -9,14 +9,11 @@ import { mailtoFromSubmission } from "@/lib/submissions";
  */
 export function DisconnectedResult({ submission }: { submission: Submission }) {
   return (
-    <div
-      role="status"
-      className="rounded-2xl border border-warning/40 bg-warning/5 p-6 sm:p-7"
-    >
+    <div role="status" className="rounded-2xl border border-warning/40 bg-warning/5 p-6 sm:p-7">
       <h3 className="h-card text-foreground">Online submission is not connected yet</h3>
       <p className="mt-3 text-sm text-ink">
-        Your details were checked but not sent — this form is not wired to a submission
-        endpoint. Use the prefilled email below, or call us and we will take the details directly.
+        Your details were checked but not sent — this form is not wired to a submission endpoint.
+        Use the prefilled email below, or call us and we will take the details directly.
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
         <a

@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Breadcrumbs, ContactBand, Cta, PageHero, SectionHeading } from "@/components/site/Primitives";
+import {
+  Breadcrumbs,
+  ContactBand,
+  Cta,
+  PageHero,
+  SectionHeading,
+} from "@/components/site/Primitives";
 import { Reveal } from "@/components/site/Reveal";
 import { caseStudies } from "@/content/site";
 
@@ -48,7 +54,11 @@ function CaseStudiesPage() {
                   Challenge, approach, and outcomes are pending client approval.
                 </p>
                 <div className="mt-6">
-                  <Cta to="/contact" search={{ interest: "other", project: study.slug }} variant="outline">
+                  <Cta
+                    to="/contact"
+                    search={{ interest: "other", project: study.slug }}
+                    variant="outline"
+                  >
                     Request details
                   </Cta>
                 </div>

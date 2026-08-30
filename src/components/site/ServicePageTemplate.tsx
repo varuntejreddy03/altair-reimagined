@@ -14,10 +14,15 @@ function SectionBody({ section }: { section: ServiceSection }) {
         {section.items.map((item, index) => (
           <Reveal as="li" key={item.title} delay={index * 40}>
             <div className="flex h-full items-start gap-3 rounded-xl border border-line bg-card px-5 py-4">
-              <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent" />
+              <span
+                aria-hidden="true"
+                className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent"
+              />
               <div>
                 <p className="font-medium text-foreground">{item.title}</p>
-                {item.description ? <p className="mt-1 text-sm text-ink">{item.description}</p> : null}
+                {item.description ? (
+                  <p className="mt-1 text-sm text-ink">{item.description}</p>
+                ) : null}
               </div>
             </div>
           </Reveal>
@@ -30,7 +35,10 @@ function SectionBody({ section }: { section: ServiceSection }) {
     <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {section.items.map((item, index) => (
         <Reveal key={item.title} delay={index * 55}>
-          <FeatureCard title={item.title} {...(item.description ? { description: item.description } : {})} />
+          <FeatureCard
+            title={item.title}
+            {...(item.description ? { description: item.description } : {})}
+          />
         </Reveal>
       ))}
     </div>
@@ -41,7 +49,11 @@ export function ServicePageTemplate({ service }: { service: Service }) {
   return (
     <>
       <Breadcrumbs items={[{ label: "Services", to: "/services" }, { label: service.name }]} />
-      <PageHero eyebrow={service.group === "Build" ? "Build" : "Strengthen"} title={service.h1} body={service.intro} />
+      <PageHero
+        eyebrow={service.group === "Build" ? "Build" : "Strengthen"}
+        title={service.h1}
+        body={service.intro}
+      />
 
       {service.sections.map((section, index) => (
         <section key={section.title} className={index % 2 === 1 ? "bg-surface" : undefined}>

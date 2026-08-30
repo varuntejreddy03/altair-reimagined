@@ -84,33 +84,78 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
     <form noValidate onSubmit={handleSubmit(onSubmit)} className="relative space-y-6">
       <ErrorSummary errors={errorList} />
       {failed ? (
-        <div role="alert" className="rounded-xl border border-error/40 bg-error/5 p-4 text-sm text-error">
+        <div
+          role="alert"
+          className="rounded-xl border border-error/40 bg-error/5 p-4 text-sm text-error"
+        >
           We couldn't send your message. Please email or call us instead.
         </div>
       ) : null}
 
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="First name" htmlFor="firstName" required error={errors.firstName?.message}>
-          <input id="firstName" autoComplete="given-name" className={controlClass} {...register("firstName")} />
+          <input
+            id="firstName"
+            autoComplete="given-name"
+            className={controlClass}
+            {...register("firstName")}
+          />
         </Field>
         <Field label="Last name" htmlFor="lastName" required error={errors.lastName?.message}>
-          <input id="lastName" autoComplete="family-name" className={controlClass} {...register("lastName")} />
+          <input
+            id="lastName"
+            autoComplete="family-name"
+            className={controlClass}
+            {...register("lastName")}
+          />
         </Field>
         <Field label="Work email" htmlFor="email" required error={errors.email?.message}>
-          <input id="email" type="email" autoComplete="email" className={controlClass} {...register("email")} />
+          <input
+            id="email"
+            type="email"
+            autoComplete="email"
+            className={controlClass}
+            {...register("email")}
+          />
         </Field>
-        <Field label="Phone" htmlFor="phone" hint="Include country code" error={errors.phone?.message}>
-          <input id="phone" type="tel" autoComplete="tel" className={controlClass} {...register("phone")} />
+        <Field
+          label="Phone"
+          htmlFor="phone"
+          hint="Include country code"
+          error={errors.phone?.message}
+        >
+          <input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            className={controlClass}
+            {...register("phone")}
+          />
         </Field>
         <Field label="Company or organization" htmlFor="company" error={errors.company?.message}>
-          <input id="company" autoComplete="organization" className={controlClass} {...register("company")} />
+          <input
+            id="company"
+            autoComplete="organization"
+            className={controlClass}
+            {...register("company")}
+          />
         </Field>
         <Field label="Role or title" htmlFor="role" error={errors.role?.message}>
-          <input id="role" autoComplete="organization-title" className={controlClass} {...register("role")} />
+          <input
+            id="role"
+            autoComplete="organization-title"
+            className={controlClass}
+            {...register("role")}
+          />
         </Field>
       </div>
 
-      <Field label="What is this about?" htmlFor="interest" required error={errors.interest?.message}>
+      <Field
+        label="What is this about?"
+        htmlFor="interest"
+        required
+        error={errors.interest?.message}
+      >
         <select id="interest" className={controlClass} {...register("interest")}>
           <option value="">Select an option</option>
           {interestOptions.map((option) => (
@@ -142,7 +187,12 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
             ))}
           </select>
         </Field>
-        <Field label="Preferred contact method" htmlFor="preferredContact" required error={errors.preferredContact?.message}>
+        <Field
+          label="Preferred contact method"
+          htmlFor="preferredContact"
+          required
+          error={errors.preferredContact?.message}
+        >
           <select id="preferredContact" className={controlClass} {...register("preferredContact")}>
             <option value="email">Email</option>
             <option value="phone">Phone</option>

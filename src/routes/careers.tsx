@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Breadcrumbs, ContactBand, FeatureCard, PageHero, SectionHeading } from "@/components/site/Primitives";
+import {
+  Breadcrumbs,
+  ContactBand,
+  FeatureCard,
+  PageHero,
+  SectionHeading,
+} from "@/components/site/Primitives";
 import { Reveal } from "@/components/site/Reveal";
 import { TalentNetworkForm } from "@/components/site/forms/TalentNetworkForm";
 
@@ -22,10 +28,22 @@ export const Route = createFileRoute("/careers")({
 });
 
 const whyAltair = [
-  { title: "Continuous learning", description: "Access to Skills Lab and time to build depth in your craft." },
-  { title: "Meaningful projects", description: "Work that ships and gets used, across industries and technologies." },
-  { title: "Collaborative culture", description: "Small teams, direct communication, and shared ownership." },
-  { title: "Technical growth", description: "Mentorship and exposure to architecture, data, AI, and security work." },
+  {
+    title: "Continuous learning",
+    description: "Access to Skills Lab and time to build depth in your craft.",
+  },
+  {
+    title: "Meaningful projects",
+    description: "Work that ships and gets used, across industries and technologies.",
+  },
+  {
+    title: "Collaborative culture",
+    description: "Small teams, direct communication, and shared ownership.",
+  },
+  {
+    title: "Technical growth",
+    description: "Mentorship and exposure to architecture, data, AI, and security work.",
+  },
 ];
 
 const areas = [
