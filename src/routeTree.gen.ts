@@ -10,11 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as ConsultingRouteImport } from './routes/consulting'
 import { Route as CyberSecurityRouteImport } from './routes/cyber-security'
 import { Route as DataSceineceRouteImport } from './routes/data-sceinece'
 import { Route as FullStackDevelopmentRouteImport } from './routes/full-stack-development'
+import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InnovationRouteImport } from './routes/innovation'
 import { Route as ItStaffingRouteImport } from './routes/it-staffing'
 import { Route as ItStaffingAndConsultingRouteImport } from './routes/it-staffing-and-consulting'
@@ -23,6 +25,7 @@ import { Route as TrainingRouteImport } from './routes/training'
 import { Route as TrainingAndInnovationRouteImport } from './routes/training-and-innovation'
 import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
 import { Route as ProjectPagesSplatRouteImport } from './routes/project-pages.$'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesArtificialIntelligenceRouteImport } from './routes/services.artificial-intelligence'
 import { Route as ServicesCybersecurityRouteImport } from './routes/services.cybersecurity'
 import { Route as ServicesDataScienceEngineeringRouteImport } from './routes/services.data-science-engineering'
@@ -34,6 +37,11 @@ import { Route as ServicesTechnologyConsultingRouteImport } from './routes/servi
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiRoute = AiRouteImport.update({
@@ -59,6 +67,11 @@ const DataSceineceRoute = DataSceineceRouteImport.update({
 const FullStackDevelopmentRoute = FullStackDevelopmentRouteImport.update({
   id: '/full-stack-development',
   path: '/full-stack-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InnovationRoute = InnovationRouteImport.update({
@@ -99,6 +112,11 @@ const WhatWeDoRoute = WhatWeDoRouteImport.update({
 const ProjectPagesSplatRoute = ProjectPagesSplatRouteImport.update({
   id: '/project-pages/$',
   path: '/project-pages/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesArtificialIntelligenceRoute =
@@ -144,11 +162,13 @@ const ServicesTechnologyConsultingRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
@@ -164,14 +184,17 @@ export interface FileRoutesByFullPath {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
@@ -187,15 +210,18 @@ export interface FileRoutesByTo {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/ai': typeof AiRoute
   '/consulting': typeof ConsultingRoute
   '/cyber-security': typeof CyberSecurityRoute
   '/data-sceinece': typeof DataSceineceRoute
   '/full-stack-development': typeof FullStackDevelopmentRoute
+  '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
@@ -211,16 +237,19 @@ export interface FileRoutesById {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about-us'
     | '/ai'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
+    | '/industries'
     | '/innovation'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
@@ -236,14 +265,17 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about-us'
     | '/ai'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
+    | '/industries'
     | '/innovation'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
@@ -259,14 +291,17 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/services'
   id:
     | '__root__'
     | '/'
+    | '/about-us'
     | '/ai'
     | '/consulting'
     | '/cyber-security'
     | '/data-sceinece'
     | '/full-stack-development'
+    | '/industries'
     | '/innovation'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
@@ -282,15 +317,18 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
   AiRoute: typeof AiRoute
   ConsultingRoute: typeof ConsultingRoute
   CyberSecurityRoute: typeof CyberSecurityRoute
   DataSceineceRoute: typeof DataSceineceRoute
   FullStackDevelopmentRoute: typeof FullStackDevelopmentRoute
+  IndustriesRoute: typeof IndustriesRoute
   InnovationRoute: typeof InnovationRoute
   ItStaffingRoute: typeof ItStaffingRoute
   ItStaffingAndConsultingRoute: typeof ItStaffingAndConsultingRoute
@@ -306,6 +344,7 @@ export interface RootRouteChildren {
   ServicesItStaffingRoute: typeof ServicesItStaffingRoute
   ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
   ServicesTechnologyConsultingRoute: typeof ServicesTechnologyConsultingRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -315,6 +354,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai': {
@@ -350,6 +396,13 @@ declare module '@tanstack/react-router' {
       path: '/full-stack-development'
       fullPath: '/full-stack-development'
       preLoaderRoute: typeof FullStackDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/innovation': {
@@ -408,6 +461,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectPagesSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/artificial-intelligence': {
       id: '/services/artificial-intelligence'
       path: '/services/artificial-intelligence'
@@ -462,11 +522,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
   AiRoute: AiRoute,
   ConsultingRoute: ConsultingRoute,
   CyberSecurityRoute: CyberSecurityRoute,
   DataSceineceRoute: DataSceineceRoute,
   FullStackDevelopmentRoute: FullStackDevelopmentRoute,
+  IndustriesRoute: IndustriesRoute,
   InnovationRoute: InnovationRoute,
   ItStaffingRoute: ItStaffingRoute,
   ItStaffingAndConsultingRoute: ItStaffingAndConsultingRoute,
@@ -482,6 +544,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesItStaffingRoute: ServicesItStaffingRoute,
   ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
   ServicesTechnologyConsultingRoute: ServicesTechnologyConsultingRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
