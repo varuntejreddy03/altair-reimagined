@@ -18,6 +18,7 @@ import { Route as DataSceineceRouteImport } from './routes/data-sceinece'
 import { Route as FullStackDevelopmentRouteImport } from './routes/full-stack-development'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as InnovationRouteImport } from './routes/innovation'
+import { Route as InnovationLabRouteImport } from './routes/innovation-lab'
 import { Route as ItStaffingRouteImport } from './routes/it-staffing'
 import { Route as ItStaffingAndConsultingRouteImport } from './routes/it-staffing-and-consulting'
 import { Route as SoftwareDevelopmentRouteImport } from './routes/software-development'
@@ -33,6 +34,8 @@ import { Route as ServicesFullStackDevelopmentRouteImport } from './routes/servi
 import { Route as ServicesItStaffingRouteImport } from './routes/services.it-staffing'
 import { Route as ServicesSoftwareDevelopmentRouteImport } from './routes/services.software-development'
 import { Route as ServicesTechnologyConsultingRouteImport } from './routes/services.technology-consulting'
+import { Route as SkillsLabIndexRouteImport } from './routes/skills-lab.index'
+import { Route as SkillsLabTrainingRouteImport } from './routes/skills-lab.training'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -77,6 +80,11 @@ const IndustriesRoute = IndustriesRouteImport.update({
 const InnovationRoute = InnovationRouteImport.update({
   id: '/innovation',
   path: '/innovation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InnovationLabRoute = InnovationLabRouteImport.update({
+  id: '/innovation-lab',
+  path: '/innovation-lab',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ItStaffingRoute = ItStaffingRouteImport.update({
@@ -159,6 +167,16 @@ const ServicesTechnologyConsultingRoute =
     path: '/services/technology-consulting',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SkillsLabIndexRoute = SkillsLabIndexRouteImport.update({
+  id: '/skills-lab/',
+  path: '/skills-lab/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SkillsLabTrainingRoute = SkillsLabTrainingRouteImport.update({
+  id: '/skills-lab/training',
+  path: '/skills-lab/training',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -170,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/full-stack-development': typeof FullStackDevelopmentRoute
   '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
+  '/innovation-lab': typeof InnovationLabRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
   '/software-development': typeof SoftwareDevelopmentRoute
@@ -184,7 +203,9 @@ export interface FileRoutesByFullPath {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/skills-lab/training': typeof SkillsLabTrainingRoute
   '/services/': typeof ServicesIndexRoute
+  '/skills-lab/': typeof SkillsLabIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -196,6 +217,7 @@ export interface FileRoutesByTo {
   '/full-stack-development': typeof FullStackDevelopmentRoute
   '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
+  '/innovation-lab': typeof InnovationLabRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
   '/software-development': typeof SoftwareDevelopmentRoute
@@ -210,7 +232,9 @@ export interface FileRoutesByTo {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/skills-lab/training': typeof SkillsLabTrainingRoute
   '/services': typeof ServicesIndexRoute
+  '/skills-lab': typeof SkillsLabIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -223,6 +247,7 @@ export interface FileRoutesById {
   '/full-stack-development': typeof FullStackDevelopmentRoute
   '/industries': typeof IndustriesRoute
   '/innovation': typeof InnovationRoute
+  '/innovation-lab': typeof InnovationLabRoute
   '/it-staffing': typeof ItStaffingRoute
   '/it-staffing-and-consulting': typeof ItStaffingAndConsultingRoute
   '/software-development': typeof SoftwareDevelopmentRoute
@@ -237,7 +262,9 @@ export interface FileRoutesById {
   '/services/it-staffing': typeof ServicesItStaffingRoute
   '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
   '/services/technology-consulting': typeof ServicesTechnologyConsultingRoute
+  '/skills-lab/training': typeof SkillsLabTrainingRoute
   '/services/': typeof ServicesIndexRoute
+  '/skills-lab/': typeof SkillsLabIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -251,6 +278,7 @@ export interface FileRouteTypes {
     | '/full-stack-development'
     | '/industries'
     | '/innovation'
+    | '/innovation-lab'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
     | '/software-development'
@@ -265,7 +293,9 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/skills-lab/training'
     | '/services/'
+    | '/skills-lab/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -277,6 +307,7 @@ export interface FileRouteTypes {
     | '/full-stack-development'
     | '/industries'
     | '/innovation'
+    | '/innovation-lab'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
     | '/software-development'
@@ -291,7 +322,9 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/skills-lab/training'
     | '/services'
+    | '/skills-lab'
   id:
     | '__root__'
     | '/'
@@ -303,6 +336,7 @@ export interface FileRouteTypes {
     | '/full-stack-development'
     | '/industries'
     | '/innovation'
+    | '/innovation-lab'
     | '/it-staffing'
     | '/it-staffing-and-consulting'
     | '/software-development'
@@ -317,7 +351,9 @@ export interface FileRouteTypes {
     | '/services/it-staffing'
     | '/services/software-development'
     | '/services/technology-consulting'
+    | '/skills-lab/training'
     | '/services/'
+    | '/skills-lab/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -330,6 +366,7 @@ export interface RootRouteChildren {
   FullStackDevelopmentRoute: typeof FullStackDevelopmentRoute
   IndustriesRoute: typeof IndustriesRoute
   InnovationRoute: typeof InnovationRoute
+  InnovationLabRoute: typeof InnovationLabRoute
   ItStaffingRoute: typeof ItStaffingRoute
   ItStaffingAndConsultingRoute: typeof ItStaffingAndConsultingRoute
   SoftwareDevelopmentRoute: typeof SoftwareDevelopmentRoute
@@ -344,7 +381,9 @@ export interface RootRouteChildren {
   ServicesItStaffingRoute: typeof ServicesItStaffingRoute
   ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
   ServicesTechnologyConsultingRoute: typeof ServicesTechnologyConsultingRoute
+  SkillsLabTrainingRoute: typeof SkillsLabTrainingRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
+  SkillsLabIndexRoute: typeof SkillsLabIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -410,6 +449,13 @@ declare module '@tanstack/react-router' {
       path: '/innovation'
       fullPath: '/innovation'
       preLoaderRoute: typeof InnovationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/innovation-lab': {
+      id: '/innovation-lab'
+      path: '/innovation-lab'
+      fullPath: '/innovation-lab'
+      preLoaderRoute: typeof InnovationLabRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/it-staffing': {
@@ -517,6 +563,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesTechnologyConsultingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/skills-lab/': {
+      id: '/skills-lab/'
+      path: '/skills-lab'
+      fullPath: '/skills-lab/'
+      preLoaderRoute: typeof SkillsLabIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/skills-lab/training': {
+      id: '/skills-lab/training'
+      path: '/skills-lab/training'
+      fullPath: '/skills-lab/training'
+      preLoaderRoute: typeof SkillsLabTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -530,6 +590,7 @@ const rootRouteChildren: RootRouteChildren = {
   FullStackDevelopmentRoute: FullStackDevelopmentRoute,
   IndustriesRoute: IndustriesRoute,
   InnovationRoute: InnovationRoute,
+  InnovationLabRoute: InnovationLabRoute,
   ItStaffingRoute: ItStaffingRoute,
   ItStaffingAndConsultingRoute: ItStaffingAndConsultingRoute,
   SoftwareDevelopmentRoute: SoftwareDevelopmentRoute,
@@ -544,7 +605,9 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesItStaffingRoute: ServicesItStaffingRoute,
   ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
   ServicesTechnologyConsultingRoute: ServicesTechnologyConsultingRoute,
+  SkillsLabTrainingRoute: SkillsLabTrainingRoute,
   ServicesIndexRoute: ServicesIndexRoute,
+  SkillsLabIndexRoute: SkillsLabIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
