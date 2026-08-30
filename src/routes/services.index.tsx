@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Breadcrumbs, ContactBand, FeatureCard, PageHero, SectionHeading } from "@/components/site/Primitives";
+import {
+  Breadcrumbs,
+  ContactBand,
+  FeatureCard,
+  PageHero,
+  SectionHeading,
+} from "@/components/site/Primitives";
 import { Reveal } from "@/components/site/Reveal";
 import { engagementOptions, services } from "@/content/services";
 
@@ -15,6 +21,12 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: "/services" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),

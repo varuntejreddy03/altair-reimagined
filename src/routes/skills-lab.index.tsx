@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Breadcrumbs, ContactBand, FeatureCard, PageHero, SectionHeading } from "@/components/site/Primitives";
+import {
+  Breadcrumbs,
+  ContactBand,
+  FeatureCard,
+  PageHero,
+  SectionHeading,
+} from "@/components/site/Primitives";
 import { Reveal } from "@/components/site/Reveal";
 
 const title = "Altair Skills Lab | Altair Technologies Inc.";
@@ -14,6 +20,12 @@ export const Route = createFileRoute("/skills-lab/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: "/skills-lab" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "/skills-lab" }],
   }),
@@ -21,9 +33,18 @@ export const Route = createFileRoute("/skills-lab/")({
 });
 
 const audiences = [
-  { title: "Working professionals", description: "Engineers and analysts adding depth in Java, SQL, AI, or full-stack delivery." },
-  { title: "Aspiring engineers", description: "People moving into technology who need real projects, not only theory." },
-  { title: "Teams", description: "Organizations that want practical enablement alongside a delivery programme." },
+  {
+    title: "Working professionals",
+    description: "Engineers and analysts adding depth in Java, SQL, AI, or full-stack delivery.",
+  },
+  {
+    title: "Aspiring engineers",
+    description: "People moving into technology who need real projects, not only theory.",
+  },
+  {
+    title: "Teams",
+    description: "Organizations that want practical enablement alongside a delivery programme.",
+  },
 ];
 
 function SkillsLabPage() {
@@ -37,7 +58,10 @@ function SkillsLabPage() {
       />
 
       <section className="container-page section-y">
-        <SectionHeading eyebrow="Two pathways" title="Learning and experimentation, side by side." />
+        <SectionHeading
+          eyebrow="Two pathways"
+          title="Learning and experimentation, side by side."
+        />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           <Reveal>
             <FeatureCard

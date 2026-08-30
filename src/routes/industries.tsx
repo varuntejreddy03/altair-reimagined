@@ -16,6 +16,12 @@ export const Route = createFileRoute("/industries")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: "/industries" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "/industries" }],
   }),
@@ -71,7 +77,10 @@ function IndustriesPage() {
                   <ul className="mt-3 space-y-2 text-sm text-ink">
                     {industry.capabilities.map((capability) => (
                       <li key={capability} className="flex gap-2">
-                        <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent" />
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent"
+                        />
                         {capability}
                       </li>
                     ))}
@@ -84,7 +93,10 @@ function IndustriesPage() {
                   <ul className="mt-3 space-y-2 text-sm text-ink">
                     {industry.patterns.map((pattern) => (
                       <li key={pattern} className="flex gap-2">
-                        <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent" />
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 size-1.5 shrink-0 rounded-full bg-cyan-accent"
+                        />
                         {pattern}
                       </li>
                     ))}
@@ -118,7 +130,10 @@ function IndustriesPage() {
         </section>
       ))}
 
-      <ContactBand title="Bring us your industry problem." description="We will map it to the capabilities, data, and controls it actually needs." />
+      <ContactBand
+        title="Bring us your industry problem."
+        description="We will map it to the capabilities, data, and controls it actually needs."
+      />
     </>
   );
 }

@@ -85,6 +85,12 @@ export function serviceHead(service: Service) {
       { property: "og:title", content: service.metaTitle },
       { property: "og:description", content: service.metaDescription },
       { property: "og:url", content: service.path },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "canonical", href: service.path }],
     scripts: [

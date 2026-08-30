@@ -15,6 +15,12 @@ export const Route = createFileRoute("/skills-lab/training")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: "/skills-lab/training" },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "/skills-lab/training" }],
   }),
@@ -47,7 +53,9 @@ const programs = [
 function TrainingPage() {
   return (
     <>
-      <Breadcrumbs items={[{ label: "Skills Lab", to: "/skills-lab" }, { label: "Training Programs" }]} />
+      <Breadcrumbs
+        items={[{ label: "Skills Lab", to: "/skills-lab" }, { label: "Training Programs" }]}
+      />
       <PageHero
         eyebrow="Skills Lab"
         title="Training programs that build bold engineers."
