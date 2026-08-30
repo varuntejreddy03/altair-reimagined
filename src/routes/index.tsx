@@ -85,7 +85,7 @@ function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="on-navy relative overflow-hidden">
+      <section className="on-navy relative -mt-16 overflow-hidden pt-16 sm:-mt-20 sm:pt-20">
         <div aria-hidden="true" className="grid-field absolute inset-0 opacity-45" />
         <TrajectoryField />
         <div className="container-page relative section-y">
