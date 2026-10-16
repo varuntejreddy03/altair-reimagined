@@ -11,7 +11,8 @@ export const FORMS_CONNECTED = false;
 export const company = {
   name: "Altair Technologies Inc.",
   shortName: "Altair",
-  tagline: "Software, talent, and innovation built for what's next.",
+  tagline: "Empowering Talent. Building Innovation.",
+  subtitle: "Comprehensive consulting services for your needs.",
   phone: "+1 (720) 675-3656",
   phoneHref: "tel:+17206753656",
   email: "admin@altairtechnologiesinc.com",
@@ -23,7 +24,6 @@ export type NavItem = { label: string; to: string };
 export type NavGroup = { label: string; to?: string; items: NavItem[] };
 
 export const primaryNav: (NavItem | NavGroup)[] = [
-  { label: "Home", to: "/" },
   {
     label: "Company",
     items: [

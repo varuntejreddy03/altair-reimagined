@@ -43,10 +43,25 @@ function ServicesPage() {
     <>
       <Breadcrumbs items={[{ label: "Services" }]} />
       <PageHero
-        eyebrow="Capabilities"
+        eyebrow="Enterprise Capabilities"
         title="Capabilities that move businesses forward."
-        body="From strategy and talent to production-ready systems, Altair brings together the capabilities organizations need to modernize, scale, and innovate."
-      />
+        body="From custom software delivery and specialized IT staffing to production-ready AI pipelines, Altair Technologies brings together the capabilities organizations need to modernize, scale, and innovate."
+      >
+        <Link to="/contact" className="hmh-btn hmh-btn-white">
+          <span className="hmh-btn-circle">
+            <ArrowRight className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Discuss Requirements</span>
+        </Link>
+        <a href="#services-list" className="hmh-btn hmh-btn-ghost">
+          <span className="hmh-btn-circle">
+            <ArrowRight className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Explore All Practices</span>
+        </a>
+      </PageHero>
+
+      <div id="services-list" className="scroll-mt-24" />
 
       {groups.map((group, groupIndex) => (
         <section key={group.name} className={groupIndex % 2 === 1 ? "bg-surface" : undefined}>

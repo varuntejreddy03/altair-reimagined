@@ -15,18 +15,24 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { BackToTop, Cta } from "@/components/site/Primitives";
 import { company } from "@/content/site";
+import { ScrollProgress } from "@/components/site/ScrollProgress";
+import { SmoothCursor } from "@/components/site/SmoothCursor";
+import { FloatingDotNav } from "@/components/site/FloatingDotNav";
 
 function SiteChrome({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col overflow-x-hidden">
+    <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#f8fafc] text-slate-800">
+      <ScrollProgress />
+      <SmoothCursor />
+      <FloatingDotNav />
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
       >
         Skip to content
       </a>
       <Header />
-      <main id="main" className="flex-1 pt-16 sm:pt-20">
+      <main id="main" className="flex-1">
         {children}
       </main>
       <Footer />
@@ -129,7 +135,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap",
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "icon", href: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },

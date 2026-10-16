@@ -19,18 +19,22 @@ export function DisconnectedResult({ submission }: { submission: Submission }) {
         <a
           href={mailtoFromSubmission(submission, company.email)}
           data-analytics="email_click"
-          className="inline-flex min-h-11 items-center gap-2 rounded-full bg-brand px-6 text-sm font-semibold text-primary-foreground"
+          className="hmh-btn hmh-btn-primary"
         >
-          <Mail aria-hidden="true" className="size-4" />
-          Email your details
+          <span className="hmh-btn-circle">
+            <Mail aria-hidden="true" className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Email your details</span>
         </a>
         <a
           href={company.phoneHref}
           data-analytics="phone_click"
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-card px-6 text-sm font-semibold text-foreground"
+          className="hmh-btn hmh-btn-outline"
         >
-          <Phone aria-hidden="true" className="size-4" />
-          Call {company.phone}
+          <span className="hmh-btn-circle">
+            <Phone aria-hidden="true" className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Call {company.phone}</span>
         </a>
       </div>
     </div>

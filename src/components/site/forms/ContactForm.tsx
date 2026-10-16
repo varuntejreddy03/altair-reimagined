@@ -2,6 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { ArrowRight } from "lucide-react";
 import { Field, ErrorSummary, Honeypot, controlClass } from "./FormFields";
 import { ConnectedResult, DisconnectedResult } from "./SubmissionResult";
 import { FORMS_CONNECTED, interestOptions } from "@/content/site";
@@ -223,9 +224,12 @@ export function ContactForm({ defaultInterest }: { defaultInterest?: string }) {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex min-h-12 items-center justify-center rounded-full bg-brand px-7 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-60"
+        className="hmh-btn hmh-btn-primary cursor-pointer disabled:opacity-60"
       >
-        {isSubmitting ? "Checking details…" : "Send your enquiry"}
+        <span className="hmh-btn-circle">
+          <ArrowRight className="size-3.5 stroke-[2.5]" />
+        </span>
+        <span>{isSubmitting ? "Checking details…" : "Send your enquiry"}</span>
       </button>
     </form>
   );

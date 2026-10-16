@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import {
   Breadcrumbs,
   ContactBand,
@@ -52,10 +53,23 @@ function SkillsLabPage() {
     <>
       <Breadcrumbs items={[{ label: "Skills Lab" }]} />
       <PageHero
-        eyebrow="Skills Lab"
+        eyebrow="Altair Skills Lab"
         title="Build the skills. Build the future."
         body="Altair Skills Lab connects knowledge with real-world engineering. We help professionals grow through practical training while giving engineers space to prototype solutions in AI, cybersecurity, data, and modern software development."
-      />
+      >
+        <Link to="/skills-lab/training" className="hmh-btn hmh-btn-white">
+          <span className="hmh-btn-circle">
+            <ArrowRight className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Explore Training</span>
+        </Link>
+        <Link to="/innovation-lab" className="hmh-btn hmh-btn-ghost">
+          <span className="hmh-btn-circle">
+            <ArrowRight className="size-3.5 stroke-[2.5]" />
+          </span>
+          <span>Innovation Lab</span>
+        </Link>
+      </PageHero>
 
       <section className="container-page section-y">
         <SectionHeading
